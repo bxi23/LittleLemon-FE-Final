@@ -1,0 +1,43 @@
+/* Define a CSS variable for the font size */
+:root {
+    --nav-font-size: 15px;
+}
+
+/* Base styles */
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Karla;
+    font-size: var(--nav-font-size);
+}
+
+/* Logo style */
+.nav img {
+    height: calc(2 * var(--nav-font-size));
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10%;
+    margin-top: auto;
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root {
+        --nav-font-size: 12px;
+    }
+}
+
+/* Medium devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    :root {
+        --nav-font-size: 14px;
+    }
+}
+
+/* Large devices (landscape tablets and desktops, 768px and up) */
+@media only screen and (min-width: 768px) {
+    :root {
+        --nav-font-size: 16px;
+    }
+}
