@@ -29,7 +29,7 @@ const BookingForm = ({ formik, availableTimes = null }) => {
       };
 
     return (
-        <form onSubmit={formik.handleSubmit} style={formStyle}>
+        <form onSubmit={formik.handleSubmit} style={formStyle} id='form'>
             <label htmlFor="name">Enter Name</label>
             <input
                 type="text"
@@ -55,7 +55,7 @@ const BookingForm = ({ formik, availableTimes = null }) => {
             {formik.touched.date && formik.errors.date ? (
             <div style={errorStyle}> {formik.errors.date}</div>
             ) : null}
-            
+
             <label htmlFor="time">Choose time</label>
             <select
                 id="time"
@@ -64,20 +64,13 @@ const BookingForm = ({ formik, availableTimes = null }) => {
                 value={formik.values.time}
                 onBlur={formik.handleBlur}
             >
-                {/* <option value="" label="Select time" />
-                <option value="17:00" label="17:00" />
-                <option value="18:00" label="18:00" />
-                <option value="19:00" label="19:00" />
-                <option value="20:00" label="20:00" />
-                <option value="21:00" label="21:00" />
-                <option value="22:00" label="22:00" /> */}
                 <option value="" label="Select time" />
                 {initializeTimes(availableTimes)}
             </select>
             {formik.touched.time && formik.errors.time ? (
             <div style={errorStyle}> {formik.errors.time}</div>
             ) : null}
-            
+
             <label htmlFor="guests">Number of guests</label>
             <input
                 type="number"
@@ -92,7 +85,7 @@ const BookingForm = ({ formik, availableTimes = null }) => {
             {formik.touched.guests && formik.errors.guests ? (
             <div style={errorStyle}> {formik.errors.guests}</div>
             ) : null}
-            
+
             <label htmlFor="occasion">Occasion</label>
             <select
                 id="occasion"
@@ -108,7 +101,7 @@ const BookingForm = ({ formik, availableTimes = null }) => {
             {formik.touched.occasion && formik.errors.occasion ? (
             <div style={errorStyle}> {formik.errors.occasion}</div>
             ) : null}
-            
+
             <input type="submit" value="Make Your reservation" />
         </form>
     );
