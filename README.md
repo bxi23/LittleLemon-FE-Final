@@ -1,4 +1,4 @@
-#Running application
+# Running application
 npm install "to install all npm packages required run application"
 npm start
 
