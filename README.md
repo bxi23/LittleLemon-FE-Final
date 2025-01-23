@@ -1,3 +1,7 @@
+#Running application
+npm install "to install all npm packages required run application"
+npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
