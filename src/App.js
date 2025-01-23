@@ -11,7 +11,7 @@ import Nav from './components/Nav';
 import Home from './pages/Home';
 import Footer from "./components/Footer";
 import Booking from './pages/Booking';
-import ConfirmedBooking from './pages/confirmedBooking';
+import ConfirmedBooking from './pages/ConfirmedBooking';
 
 function App() {
   return (
